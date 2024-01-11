@@ -3,9 +3,9 @@
 
   // Count Down JS
   $('#simple-timer').syotimer({
-    year: 2023,
-    month: 4,
-    day: 21,
+    year: 2024,
+    month: 2,
+    day: 7,
     hour: 10,
     minute: 0
   });
@@ -47,26 +47,38 @@
 
 })(jQuery);
 
-document.addEventListener('DOMContentLoaded', function () {
-  var headerBar = document.querySelector('.header-bar');
-  var navbar = document.querySelector('.navbar');
 
-  // Initial check for scroll position
-  checkScroll();
 
-  // Event listener for scroll
-  window.addEventListener('scroll', function () {
-    checkScroll();
-  });
 
-  // Function to check scroll position and toggle classes
-  function checkScroll() {
-    var scrollPosition = window.scrollY;
+const openNav = document.querySelector('.menu-bar button');
+const closeNav = document.querySelector('.close-nav button');
+const Navbar = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.navbar ul a');
 
-    if (scrollPosition > 50) {
-      headerBar.classList.add('scrolled');
-    } else {
-      headerBar.classList.remove('scrolled');
+// Hiding body scroll when mobile navigation menu opens
+function bodyScroll() {
+    if (Navbar.classList.contains('show')) {
+        document.body.classList.add('hide-scroll');
+    } else if (document.body.classList.contains('hide-scroll')) {
+        document.body.classList.remove('hide-scroll');
     }
-  }
-})(jQuery);
+}
+
+
+function showHide() {
+    Navbar.classList.toggle('show');
+    bodyScroll();
+}
+
+function closeNavbar() {
+    Navbar.classList.remove('show');
+    bodyScroll();
+}
+
+openNav.onclick = showHide;
+closeNav.onclick = showHide;
+
+// Close the bugger when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', closeNavbar);
+});
