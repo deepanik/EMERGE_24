@@ -82,3 +82,50 @@ closeNav.onclick = showHide;
 navLinks.forEach(link => {
     link.addEventListener('click', closeNavbar);
 });
+
+
+
+// $(document).ready(function(){
+//   // Initialize the dropdown
+//   $('.form-select').change(function(e){
+//     e.preventDefault(); // Prevent the default behavior of the link
+//     var selectedValue = $(this).val();
+//     // Hide all speakers
+//     $('.speaker').hide();
+//     // Show speakers based on the selected day
+//     $('.' + selectedValue).show();
+//   });
+// });
+
+//   // Assuming you have jQuery and Bootstrap JS included in your project
+
+//   $(document).ready(function () {
+//     $('.dropdown-menu a').on('click', function (e) {
+//       e.preventDefault();
+//       var selectedValue = $(this).data('value');
+      
+//       // Redirect based on the selected value
+//       if (selectedValue === 'all') {
+//         window.location.href = 'all-speakers'; // Replace with your actual URL
+//       } else if (selectedValue === 'feb7') {
+//         window.location.href = 'feb-7th-speakers'; // Replace with your actual URL
+//       } else if (selectedValue === 'feb8') {
+//         window.location.href = 'feb-8th-speakers'; // Replace with your actual URL
+//       } else if (selectedValue === 'feb9') {
+//         window.location.href = 'feb-9th-speakers'; // Replace with your actual URL
+//       }
+//     });
+//   });
+
+function filterSpeakers() {
+  var selectedValue = document.getElementById("SpeakerDropdown").value;
+  var speakers = document.querySelectorAll('.speaker');
+
+  speakers.forEach(function (speaker) {
+    speaker.style.display = 'none'; // Hide all speakers
+
+    if (selectedValue === 'all' || speaker.classList.contains(selectedValue)) {
+      speaker.style.display = 'block'; // Display the selected speakers
+    }
+  });
+}
