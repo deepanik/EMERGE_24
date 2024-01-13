@@ -82,17 +82,3 @@
 // navLinks.forEach(link => {
 //     link.addEventListener('click', closeNavbar);
 // });
-
-
-function filterSpeakers() {
-  var selectedValue = document.getElementById("SpeakerDropdown").value;
-  var speakers = document.querySelectorAll('.speaker');
-
-  speakers.forEach(function(speaker) {
-      speaker.style.display = 'none'; // Hide all speakers
-
-      if (selectedValue === 'all' || speaker.classList.contains(selectedValue)) {
-          speaker.style.display = 'block'; // Display the selected speakers
-      }
-  });
-}
