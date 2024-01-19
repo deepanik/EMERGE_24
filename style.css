@@ -476,6 +476,7 @@ header .logo img {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+	text-align: justify;
 }
 #about-section > div > div > div.col-lg-5.col-md-5 > div > div > img{
 	background-color: white;
@@ -515,6 +516,7 @@ header .logo img {
 	text-transform: uppercase;
 	line-height: 1;
 }
+
 @media (max-width: 767px) {
 	.stroke-text {
 		font-size: 26px;
@@ -528,6 +530,7 @@ header .logo img {
 .text-lg {
 	font-size: 25px;
 	line-height: 1.1;
+	/* text-align: justify; */
 }
 @media (max-width: 400px) {
 	.text-lg {
@@ -1207,4 +1210,11 @@ header .logo img {
 }
 .fa-instagram,.fa-linkedin{
 	color: wheat;
+}
+
+/* ///////// */
+
+.partner {
+	background-color: #ffffff; /* Background color for the section */
+	padding: 50px 0; /* Adjust the padding as needed */
 }
