@@ -82,3 +82,24 @@
 // navLinks.forEach(link => {
 //     link.addEventListener('click', closeNavbar);
 // });
+
+// script.js
+
+// script.js
+
+$(document).ready(function () {
+    // Show or hide the back-to-top arrow based on scroll position
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+
+    // Scroll to top when the arrow is clicked
+    $('#back-to-top').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+    });
+});
