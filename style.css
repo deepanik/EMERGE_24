@@ -7,7 +7,7 @@
 	box-sizing: border-box;
 }
 :root {
-	--primary-color: #ff2b2b;
+	--primary-color: hsl(0, 39%, 41%);
 	--primary-font: 'Poppins', sans-serif;
 	--event-bg-color: #ffffff;
 }
@@ -1215,7 +1215,7 @@ header .logo img {
 /* ///////// */
 
 .partner {
-	background-color: #ffffff; /* Background color for the section */
+	background-color: #7ab4d3; /* Background color for the section */
 	padding: 50px 0; /* Adjust the padding as needed */
 }
 
@@ -1230,4 +1230,12 @@ header .logo img {
 	padding: 10px;
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+#schedule-section h5 ,p{
+	padding: 2px ;
+	margin-left: 2px;
+	margin-bottom: 0.1rem;
+	text-align: justify;
+	
 }
