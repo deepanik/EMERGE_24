@@ -103,3 +103,20 @@ $(document).ready(function () {
         return false;
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".mobile-logos");
+    const logos = Array.from(container.querySelectorAll("img"));
+
+    logos.sort(function (a, b) {
+        const altA = a.alt.toUpperCase();
+        const altB = b.alt.toUpperCase();
+        if (altA < altB) return -1;
+        if (altA > altB) return 1;
+        return 0;
+    });
+
+    logos.forEach(logo => container.removeChild(logo));
+    logos.forEach(logo => container.appendChild(logo));
+});
